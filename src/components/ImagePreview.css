@@ -1,0 +1,16 @@
+.imageContainer {
+  margin: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.imageThumb {
+  width: 40%;
+  margin: 0;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.imageAuthor {
+  margin: 5px;
+}
