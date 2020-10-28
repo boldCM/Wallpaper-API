@@ -14,15 +14,20 @@ function App() {
 
   function handleClickFavourites() {
     const imgId = randomImage.id;
-    const oldFavourites = JSON.parse(localStorage.getItem("favourites")) || [];
+    let favourites = null;
 
-    const isFavourite = oldFavourites.includes(imgId);
+    try {
+      favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+    } catch (error) {
+      console.error(error);
+      favourites = [];
+    }
 
-    if (isFavourite) {
+    if (favourites.includes(imgId)) {
       return;
     }
 
-    const newFavourites = [...oldFavourites, imgId];
+    const newFavourites = [...favourites, imgId];
     localStorage.setItem("favourites", JSON.stringify(newFavourites));
   }
 
