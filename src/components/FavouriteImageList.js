@@ -4,7 +4,7 @@ import "./FavouriteImageList.css";
 
 export default function FavouriteImageList({ photoIds }) {
   return (
-    <div>
+    <div className="FavouriteImageList">
       {photoIds.map((photoId) => (
         <FavouriteImage key={photoId} photoId={photoId} />
       ))}

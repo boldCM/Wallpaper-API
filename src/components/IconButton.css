@@ -1,2 +1,16 @@
 .btn__icon {
+  /* display: block; */
+  position: fixed;
+  background-color: transparent;
+  border: none;
+  margin-left: 90px;
+}
+
+.btn__icon:focus {
+  outline: none;
+}
+
+.btn__icon:hover {
+  background-color: var(--third-color);
+  border-radius: 50%;
 }
