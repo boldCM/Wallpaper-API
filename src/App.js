@@ -3,7 +3,8 @@ import "./App.css";
 import ImagePreview from "./components/ImagePreview";
 import { useState } from "react";
 import { getRandomImage } from "./api/getRandomImage";
-import FavouriteImage from "./components/FavouriteImage";
+
+import FavouriteImageList from "./components/FavouriteImageList";
 
 function App() {
   const [randomImage, setRandomImage] = useState(null);
@@ -14,7 +15,7 @@ function App() {
   }
 
   function handleClickFavourites() {
-    const imgId = randomImage.id;
+    const photoId = randomImage.id;
     let favourites = null;
 
     try {
@@ -24,13 +25,26 @@ function App() {
       favourites = [];
     }
 
-    if (favourites.includes(imgId)) {
+    if (favourites.includes(photoId)) {
       return;
     }
 
-    const newFavourites = [...favourites, imgId];
+    const newFavourites = [...favourites, photoId];
     localStorage.setItem("favourites", JSON.stringify(newFavourites));
   }
+
+  const getFavouritesId = () => {
+    let favourites = null;
+
+    try {
+      favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+    } catch (error) {
+      console.error(error);
+      favourites = [];
+    }
+
+    return favourites;
+  };
 
   return (
     <main>
@@ -46,7 +60,10 @@ function App() {
         />
       )}
       <div>
-        <FavouriteImage />
+        {
+          /* <FavouriteImage photoId={"Z68huLIdevQ"} /> */
+          <FavouriteImageList photoIds={getFavouritesId()} />
+        }
       </div>
     </main>
   );
