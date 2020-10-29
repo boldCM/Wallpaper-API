@@ -1,8 +1,9 @@
 main {
   display: grid;
   place-items: center;
-  height: 100vh;
   grid-template-rows: 1fr auto;
+  /* background: linear-gradient(var(--secondary-color), var(--primary-color)); */
+  height: 100vh;
 }
 
 .btn {

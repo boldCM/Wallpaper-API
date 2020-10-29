@@ -12,6 +12,6 @@
   width: 250px;
   border: 1px solid var(--third-color);
   border-bottom: none;
-  /* max-height: 300px; */
-  /* object-fit: cover; */
+  /* max-height: 300px;
+  object-fit: cover; */
 }

@@ -1,8 +1,8 @@
 .btn__icon {
-  /* display: block; */
-  position: fixed;
+  position: absolute;
   background-color: transparent;
   border: none;
+  margin-top: 15px;
   margin-left: 90px;
 }
 

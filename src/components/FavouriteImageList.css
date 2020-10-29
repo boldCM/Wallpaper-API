@@ -1,12 +1,12 @@
 .FavouriteImageList {
   display: flex;
   max-height: 300px;
-  overflow-x: auto;
-  width: 100%;
+  /* overflow-x: auto; */
+  /* width: 100%; */
 }
 
 .FavouriteImageList > img {
-  object-fit: contain;
-  width: 200px;
-  margin: 0 1rem;
+  /* object-fit: contain; */
+  /* margin: 0 1rem; */
+  /* width: 200px; */
 }

@@ -10,8 +10,4 @@ export default function FavouriteImageList({ photoIds }) {
       ))}
     </div>
   );
-
-  // const createImageList= getFavourites.map((photoId)=>
-  // <li key={getFavourites.toString()}>{photoId}</li>
-  // ich habe h kein value definiert, ist das schlimm?
 }
