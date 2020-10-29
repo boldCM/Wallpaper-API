@@ -1,0 +1,17 @@
+.favouriteCard {
+  width: 250px;
+  border: 1px solid var(--third-color);
+  border-radius: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.favouriteCard__img {
+  border-radius: 10px;
+  width: 250px;
+  border: 1px solid var(--third-color);
+  border-bottom: none;
+  /* max-height: 300px; */
+  /* object-fit: cover; */
+}
